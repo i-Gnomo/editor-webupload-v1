@@ -1,0 +1,891 @@
+@charset "utf-8";
+/* CSS Document */
+
+.cue-container {
+    position: relative;
+    border: 1px solid #d4d4d4;
+    box-shadow: 2px 2px 5px #d3d6da;
+    background-color: #fff;
+	font-family:"simsun",Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cue-container .cue-toolbar{
+    position: relative;
+    width:auto;
+    border-bottom: 1px solid #e1e1e1;
+    box-shadow: 2px 2px 5px #d3d6da;
+    background-color: #fafafa;
+}
+.cue-toolbar .cue-btn-toolbar{
+    position: relative;
+    padding: 5px;
+}
+.cue-container .cue-editor-body{
+    background-color: #fff;
+}
+.cue-editor-body .cue-body-container{
+}
+.cue-editor-body .cue-body-container p{margin:5px 0;}
+.cue-editor-body .cue-body-container{
+    border:0;
+    outline:none;
+    cursor:text;
+    padding:5px 8px 0;
+    overflow:auto;
+    display:block;
+    word-wrap:break-word;
+    font-size:16px;
+    font-family:sans-serif;
+}
+.cue-editor-body.focus{border:1px solid #5c9dff}
+.cue-editor-body table{margin:10px 0 10px;border-collapse:collapse;display:table;}
+.cue-editor-body td{padding: 5px 10px;border: 1px solid #DDD;}
+.cue-editor-body iframe.mathquill-embedded-latex{
+    border: 0px;
+    padding: 0px;
+    display: inline;
+    margin: 0px;
+    background: none;
+    vertical-align: middle;
+    width: 0px;
+    height: 0px;
+}
+/*cue-tooltip*/
+.cue-btn-toolbar .cue-tooltip{
+    position: absolute;
+    padding: 5px 0;
+    display: none;
+    /*opacity: 0.8;*/
+    /*filter: alpha(opacity=80);*/
+	z-index:1000;top:22px;left:-13px;
+}
+.cue-tooltip .cue-tooltip-arrow{
+    position: absolute;
+    top: 0;
+    _top: -2px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    padding: 0;
+    font-size:0;
+    margin-left: -5px;
+    border-color: transparent;
+    border-style: dashed dashed solid dashed;
+    border-bottom-color: #000000;
+    border-width: 0 5px 5px;
+    background: transparent;
+}
+.cue-tooltip .cue-tooltip-inner{
+    padding: 6px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    background-color: #000000;
+    white-space: nowrap;
+    line-height: 12px;
+}
+.cue-toolbar .cue-separator{
+    width: 2px;
+    height: 20px;
+    padding: 1px 2px;
+    background: url(../icons.png) -527px 1px;
+    background: url(icons.gif) -527px 1px \9;
+    display: inline-block ;
+    vertical-align: top;
+    *display: inline ;
+    *zoom:1;
+    border:none;
+
+}
+
+/*button */
+.cue-btn-toolbar .cue-btn{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    *display: inline;
+    *zoom:1;
+    width:auto;
+    margin: 0 1px;
+    padding:1px;
+    border:none;
+    background: none;
+}
+.cue-btn-toolbar .cue-btn .cue-icon{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding:0;
+    background-repeat: no-repeat;
+    background-image: url(../icons.png);
+    background-image: url(icons.gif) \9;
+}
+
+/*状态反射*/
+.cue-btn-toolbar .cue-btn.cue-hover,
+.cue-btn-toolbar .cue-btn.cue-active{
+    background-color: #d5e1f2;
+    padding: 0;
+    border: 1px solid #a3bde3;
+    _z-index: 1;
+}
+.cue-btn-toolbar .cue-btn.cue-disabled{
+    opacity: 0.3;
+    filter: alpha(opacity = 30);
+}
+/*icon*/
+.cue-btn-toolbar .cue-btn .cue-icon-source {
+    background-position:0px 0px;
+}
+.cue-btn-toolbar .cue-btn .cue-icon-undo {
+    background-position: -20px 0;
+}
+.cue-btn-toolbar .cue-btn .cue-icon-redo {
+    background-position: -40px 0;
+}
+.cue-btn-toolbar  .cue-btn .cue-icon-bold{
+    background-position: -60px 0;
+}
+.cue-btn-toolbar  .cue-btn .cue-icon-italic {
+    background-position: -80px 0;
+}
+.cue-btn-toolbar  .cue-btn .cue-icon-underline  {
+    background-position: -100px 0
+}
+.cue-btn-toolbar .cue-btn .cue-icon-strikethrough {
+    background-position: -120px 0;
+}
+
+.cue-btn-toolbar .cue-btn .cue-icon-superscript {
+    background-position: -140px 0;
+}
+.cue-btn-toolbar .cue-btn .cue-icon-subscript {
+    background-position:  -160px 0;
+}
+.cue-btn-toolbar .cue-btn .cue-icon-font, .cue-btn-toolbar .cue-btn .cue-icon-forecolor {
+    background-position: -180px 0;
+}
+
+.cue-btn-toolbar .cue-btn .cue-icon-backcolor {
+    background-position: -200px 0;
+}
+
+.cue-btn-toolbar .cue-btn .cue-icon-removeformat {
+    background-position: -240px 0;
+}
+
+.cue-btn-toolbar .cue-btn .cue-icon-justifyleft {
+    background-position: -260px 0;
+}
+
+.cue-btn-toolbar .cue-btn .cue-icon-justifycenter {
+    background-position: -280px 0;
+}
+
+.cue-btn-toolbar .cue-btn .cue-icon-justifyright {
+    background-position: -300px 0;
+}
+.cue-btn-toolbar .cue-btn .cue-icon-link {
+    background-position: -340px 0;
+}
+
+.cue-btn-toolbar .cue-btn .cue-icon-unlink {
+    background-position: -320px 0;
+}
+.cue-btn-toolbar .cue-btn .cue-icon-image {
+    background-position: -360px 0;
+}
+.cue-btn-toolbar .cue-btn .cue-icon-insertimage {
+    background-position: -380px 0;
+}
+
+.cue-btn-toolbar .cue-btn .cue-icon-video {
+    background-position: -400px 0;
+}
+.cue-btn-toolbar .cue-btn .cue-icon-pagebreak {
+    background-position: -420px 0;
+}
+.cue-btn-toolbar .cue-btn-fullscreen{
+    float:right;
+}
+.cue-btn-toolbar .cue-btn .cue-icon-fullscreen {
+    background-position: -440px 0;
+}
+.cue-btn-toolbar .cue-btn .cue-icon-horizontal {
+    background-position: -460px 0;
+}
+.cue-btn-toolbar .cue-btn .cue-icon-preview {
+    background-position: -480px 0;
+}
+
+.cue-btn-toolbar .cue-splitbutton{
+    position: relative;
+    display: inline-block ;
+    vertical-align: top;
+    *display: inline ;
+    *zoom:1;
+    margin:0 2px;
+}
+.cue-splitbutton .cue-btn{
+    margin: 0;
+}
+.cue-splitbutton .cue-caret{
+    position: relative;
+    display: inline-block ;
+    vertical-align: top;
+    *display: inline ;
+    *zoom:1;
+    width: 8px;
+    height: 20px;
+    background: url(../icons.png) -225px 0;
+    _background: url(icons.gif) -225px 0;
+}
+
+.cue-btn-toolbar .cue-splitbutton,
+.cue-btn-toolbar .cue-splitbutton{
+    _border: none;
+}
+
+/*状态反射*/
+.cue-btn-toolbar .cue-splitbutton.cue-hover .cue-btn{
+    background-color: #d5e1f2;
+}
+
+.cue-btn-toolbar .cue-splitbutton.cue-disabled{
+    opacity: 0.3;
+    filter: alpha(opacity = 30);
+}
+.cue-btn-toolbar .cue-splitbutton.cue-disabled .cue-caret{
+    opacity: 0.3 \0;
+    filter: alpha(opacity = 30)\0;
+}
+
+.cue-splitbutton-color-label {
+    width: 16px;
+    height: 3px;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    margin-left: -8px;
+    overflow: hidden;
+    line-height: 3px;
+}
+
+.cue-dialog-container li{list-style:none}
+.cue-dialog-container .cue-dialog-backdrop{
+	position:relative
+}
+.cue-dialog-container .cue-dialog-backdrop{
+	opacity:.5;filter:alpha(opacity=50);position:fixed;top:0;right:0;bottom:0;left:0;background-color:#c6c6c6
+}
+.cue-dialog-container .cue-popup-dialog{
+	display: none;
+}
+.cue-dialog-container .cue-dialog{
+	outline:none;
+}
+.cue-dialog-container .cue-dialog-close{
+	display: inline-block;
+	background:url('../images/close.png') no-repeat 3px 3px;
+	cursor:pointer;
+	width:18px;
+	height:18px;
+	float:right;
+}
+.cue-dialog-container .cue-dialog-close:hover{
+	background-color:#e7e7e2;
+}
+.cue-dialog-container .cue-input-text {
+    width: 200px;
+    padding: 3px 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	outline:none;
+}
+.cue-dialog-container .cue-dialog-preview{
+    width: 307px;
+    padding: 0;
+    overflow: hidden;
+    height: 260px;
+    line-height: 260px;
+    text-align: center;
+    background-color: #ddd;
+    float: left;
+
+}
+.cue-dialog-container .cue-dialog-preview img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cue-dialog-container .cue-dialog-image,.cue-dialog-container .cue-dialog-video{
+	width:630px;
+	height:368px;
+	border: 1px solid #e2e2e2;
+	border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+	background-color:#fff;
+	outline:none;
+}
+.cue-dialog-container .cue-dialog .cue-tab-title{
+	position: relative;
+	margin:0;
+	padding:0;
+    left: 0;
+    height: 35px;
+    white-space: nowrap;
+    font-size: 14;
+    border-bottom: 1px solid #e2e2e2;
+    transition: all .2s;
+    -webkit-transition: all .2s;	
+}
+.cue-dialog-container .cue-dialog .cue-tab-title li{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    position: relative;
+    line-height: 35px;
+    min-width: 65px;
+    padding: 0 8px 0 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.cue-dialog-container .cue-dialog .cue-tab-title span.cue-dialog-close{
+	margin-top:8px;
+}
+.cue-dialog-container .cue-dialog .cue-tab-title li.cue-tab-hover{
+	color:#08c;
+	border-bottom:2px solid #08c;
+	height:34px;
+}
+.cue-dialog-container .cue-dialog .cue-tab-title span.cue-dialog-close{
+	margin-right:5px;
+}
+
+.cue-dialog-container .cue-dialog .cue-tab-item{
+	display:none;color:#666;
+}
+.cue-dialog-container .cue-dialog .cue-tab-show{
+	display:block
+}
+.cue-dialog-container .cue-image-icon{
+	background: url('../images/image.png') no-repeat center center;
+	display: inline-block;
+    width: 120px;
+    height: 120px;
+}
+.cue-dialog-container .cue-image-loader{
+	position: absolute;
+    left: 181px;
+    top: 135px;
+}
+.cue-dialog-container .cue-image-loader .cue-image-file{
+	cursor:pointer
+}
+.cue-dialog-container .cue-dialog-image .cue-image-link,.cue-dialog-container .cue-dialog-video .cue-video-link{
+	margin:8px;
+	font-size:14px;
+}
+.cue-dialog-container .cue-dialog-image .cue-image-link ul,.cue-dialog-container .cue-dialog-video .cue-video-link ul{
+	float:left;margin:0 0 0 8px;padding:0;	
+}
+.cue-dialog-container .cue-dialog-image .cue-image-link ul li,.cue-dialog-container .cue-dialog-video .cue-video-link ul li{
+	line-height:35px;
+}
+.cue-dialog-container .cue-dialog-image .cue-image-link .cue-input-text,.cue-dialog-container .cue-dialog-video .cue-video-link .cue-input-text{
+	width:80px;
+}
+.cue-dialog-container .cue-dialog-image .cue-image-link .cue-link-text,.cue-dialog-container .cue-dialog-video .cue-video-link .cue-link-text{
+	width:235px;
+}
+.cue-dialog-container .cue-dialog-btnwrap{
+	position:absolute;
+	margin-top:270px;
+	padding-left:410px;
+}
+.cue-dialog-container .cue-dialog-btnwrap .cue-dialog-btn{
+	background: #ffffff;
+    border: 1px solid #cfcfcf;
+    color: #565656;
+    padding: 0 18px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    float: left;
+	line-height: 40px;
+}
+.cue-dialog-container .cue-dialog-btnwrap .cue-dialog-btn:hover{
+	background: #f0f0f0;
+}
+.cue-dialog-container .cue-dialog-btnwrap .cue-dialog-submit{
+    border: 1px solid #cfcfcf;
+    padding: 0 18px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    float: left;
+	line-height: 40px;
+	background: #00b7ee;
+    color: #fff;
+    border-color: transparent;
+}
+.cue-dialog-container .cue-dialog-btnwrap .cue-dialog-submit:hover{
+	background: #00a2d4;
+}
+
+
+.cue-popup{
+    display: none;
+    background: url('../images/pop-bg.png') repeat #fff;
+    padding: 2px;
+	outline:none;
+}
+.cue-popup .cue-popup-body{
+    border: 1px solid #bfbfbf;
+    background-color: #fff;
+}
+.cue-popup .cue-popup-caret{
+    width: 21px;
+    height: 11px;
+}
+.cue-popup .cue-popup-caret.up{
+    background:url('../images/caret.png') no-repeat 0 0;
+}
+.cue-popup .cue-popup-caret.down{
+    background:url('../images/caret.png') no-repeat 0 0;
+}
+.cue-popup .cue-button{
+	display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 12px;
+    background-color: #fff;
+    color: #444;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: #ccc 1px solid;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: .9;
+	outline:none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.cue-popup .cue-button:hover{
+    background-color: #e7e7e2;
+}
+
+.cue-popup .cue-link{
+    margin: 5px 10px;
+    font-size: 12px;
+	line-height:22px;
+}
+.cue-popup .cue-link .cue-link-but{
+	margin-top:5px; margin-bottom:8px;
+}
+
+
+
+.cue-popup .cue-colorpicker {
+    margin: 10px;
+    font-size: 12px;
+}
+.cue-colorpicker .cue-colorpicker-topbar{
+    height: 27px;
+    width: 200px;
+    overflow: hidden;
+}
+.cue-colorpicker .cue-colorpicker-topbar .cue-colorpicker-preview{
+    height: 20px;
+    border: 1px inset black;
+    margin-left: 1px;
+    width: 128px;
+    float: left;
+}
+.cue-colorpicker .cue-colorpicker-topbar .cue-colorpicker-nocolor{
+    float: right;
+    margin-right: 1px;
+    font-size: 12px;
+    line-height: 14px;
+    height: 14px;
+    border: 1px solid #333;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+.cue-colorpicker table{
+    border-collapse: collapse;
+    border-spacing: 2px;
+}
+.cue-colorpicker tr.cue-colorpicker-firstrow{
+    height: 30px;
+}
+.cue-colorpicker table td{
+    padding: 0 2px;
+}
+.cue-colorpicker table td .cue-colorpicker-colorcell{
+    display: block;
+    text-decoration: none;
+    color: black;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/*ubb editor webuploader*/
+.element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px,1px,1px,1px);
+}
+.cue-webuploader .queueList {margin:8px;border:2px dashed #e6e6e6;}
+.cue-webuploader .queueList.filled {padding:10px;margin:0;border:2px dashed transparent;}
+.cue-webuploader .queueList.webuploader-dnd-over {border:3px dashed #999999;}
+.cue-webuploader p {margin:0;}
+.cue-webuploader .placeholder {
+    padding-top:180px;
+	padding-bottom:42px;
+    text-align:center;
+    background:url(../images/image.png) center 83px no-repeat;
+    color: #cccccc;
+    font-size:18px;
+    position:relative;
+}
+
+.cue-webuploader .placeholder .webuploader-pick {
+    font-size: 18px;
+    background: #00b7ee;
+    border-radius: 3px;
+    line-height: 44px;
+    padding: 0 30px;
+    *width: 120px;
+    color: #fff;
+    display: inline-block;
+    margin: 0 auto 20px auto;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.cue-webuploader .placeholder .webuploader-pick-hover {
+    background: #00a2d4;
+}
+
+.cue-webuploader .placeholder .flashTip {
+    color: #666666;
+    font-size: 12px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 20px;
+}
+.cue-webuploader .placeholder .flashTip a {color:#0785d1;text-decoration:none;}
+.cue-webuploader .placeholder .flashTip a:hover {text-decoration:underline;}
+
+.cue-webuploader .filelist {list-style: none;margin: 0 0 0 5px;padding: 0;}
+
+.cue-webuploader .filelist:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.cue-webuploader .filelist li {
+    width: 110px;
+    height: 110px;
+    background: url(../images/bg.png) no-repeat;
+    text-align: center;
+    margin: 0 10px 12px 0;
+    position: relative;
+    display: inline;
+    float: left;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.cue-webuploader .filelist li p.log {
+    position: relative;
+    top: -45px;
+}
+
+.cue-webuploader .filelist li p.title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow : ellipsis;
+    top: 5px;
+    text-indent: 5px;
+    text-align: left;
+}
+
+.cue-webuploader .filelist li p.progress {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 8px;
+    overflow: hidden;
+    z-index: 50;
+    margin: 0;
+    border-radius: 0;
+    background: none;
+    -webkit-box-shadow: 0 0 0;
+}
+.cue-webuploader .filelist li p.progress span {
+    display: none;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    background: #1483d8 url(../images/progress.png) repeat-x;
+
+    -webit-transition: width 200ms linear;
+    -moz-transition: width 200ms linear;
+    -o-transition: width 200ms linear;
+    -ms-transition: width 200ms linear;
+    transition: width 200ms linear;
+
+    -webkit-animation: progressmove 2s linear infinite;
+    -moz-animation: progressmove 2s linear infinite;
+    -o-animation: progressmove 2s linear infinite;
+    -ms-animation: progressmove 2s linear infinite;
+    animation: progressmove 2s linear infinite;
+
+    -webkit-transform: translateZ(0);
+}
+
+@-webkit-keyframes progressmove {
+    0% {
+       background-position: 0 0;
+    }
+    100% {
+       background-position: 17px 0;
+    }
+}
+@-moz-keyframes progressmove {
+    0% {
+       background-position: 0 0;
+    }
+    100% {
+       background-position: 17px 0;
+    }
+}
+@keyframes progressmove {
+    0% {
+       background-position: 0 0;
+    }
+    100% {
+       background-position: 17px 0;
+    }
+}
+
+.cue-webuploader .filelist li p.imgWrap {
+    position: relative;
+    z-index: 2;
+    line-height: 110px;
+    vertical-align: middle;
+    overflow: hidden;
+    width: 110px;
+    height: 110px;
+
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+
+    -webit-transition: 200ms ease-out;
+    -moz-transition: 200ms ease-out;
+    -o-transition: 200ms ease-out;
+    -ms-transition: 200ms ease-out;
+    transition: 200ms ease-out;
+}
+
+.cue-webuploader .filelist li img {
+    width: 100%;
+}
+
+.cue-webuploader .filelist li p.error {
+    background: #f43838;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 28px;
+    line-height: 28px;
+    width: 100%;
+    z-index: 100;
+}
+
+.cue-webuploader .filelist li .success {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    z-index: 200;
+    background: url(../images/success.png) no-repeat right bottom;
+}
+
+.cue-webuploader .filelist div.file-panel {
+    position: absolute;
+    height: 0;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000', endColorstr='#80000000')\0;
+    background: rgba( 0, 0, 0, 0.5 );
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 300;
+}
+
+.cue-webuploader .filelist div.file-panel span {
+    width: 24px;
+    height: 24px;
+    display: inline;
+    float: right;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(../images/webuploadicons.png) no-repeat;
+    margin: 5px 1px 1px;
+    cursor: pointer;
+}
+
+.cue-webuploader .filelist div.file-panel span.rotateLeft {
+    background-position: 0 -24px;
+}
+.cue-webuploader .filelist div.file-panel span.rotateLeft:hover {
+    background-position: 0 0;
+}
+
+.cue-webuploader .filelist div.file-panel span.rotateRight {
+    background-position: -24px -24px;
+}
+.cue-webuploader .filelist div.file-panel span.rotateRight:hover {
+    background-position: -24px 0;
+}
+
+.cue-webuploader .filelist div.file-panel span.cancel {
+    background-position: -48px -24px;
+}
+.cue-webuploader .filelist div.file-panel span.cancel:hover {
+    background-position: -48px 0;
+}
+
+.cue-webuploader .statusBar {
+    height: 63px;
+    border-top: 1px solid #dadada;
+    padding: 0 20px;
+    line-height: 63px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.cue-webuploader .statusBar .progress {
+    border: 1px solid #1483d8;
+    width: 198px;
+    background: #fff;
+    height: 18px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    color: #6dbfff;
+    position: relative;
+    margin: 0 10px 0 0;
+}
+.cue-webuploader .statusBar .progress span.percentage {
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #1483d8;
+    position: absolute;
+}
+.cue-webuploader .statusBar .progress span.text {
+    position: relative;
+    z-index: 10;
+}
+
+.cue-webuploader .statusBar .info {
+    display: inline-block;
+    font-size: 14px;
+    color: #666666;
+}
+
+.cue-webuploader .statusBar .btns {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    line-height: 40px;
+}
+
+#filePicker2 {
+    display: inline-block;
+    float: left;
+}
+
+.cue-webuploader .statusBar .btns .webuploader-pick,
+.cue-webuploader .statusBar .btns .uploadBtn,
+.cue-webuploader .statusBar .btns .uploadBtn.state-uploading,
+.cue-webuploader .statusBar .btns .uploadBtn.state-paused {
+    background: #ffffff;
+    border: 1px solid #cfcfcf;
+    color: #565656;
+    padding: 0 18px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    float: left;
+}
+.cue-webuploader .statusBar .btns .webuploader-pick-hover,
+.cue-webuploader .statusBar .btns .uploadBtn:hover,
+.cue-webuploader .statusBar .btns .uploadBtn.state-uploading:hover,
+.cue-webuploader .statusBar .btns .uploadBtn.state-paused:hover {
+    background: #f0f0f0;
+}
+
+.cue-webuploader .statusBar .btns .uploadBtn {
+    background: #00b7ee;
+    color: #fff;
+    border-color: transparent;
+}
+.cue-webuploader .statusBar .btns .uploadBtn:hover {
+    background: #00a2d4;
+}
+
+.cue-webuploader .statusBar .btns .uploadBtn.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>JS Bin</title>
+<script>
+var selection;
+var selectRange;
+function SelectText () {
+    if(window.getSelection){
+    	selection = window.getSelection();
+    	selectRange = selection ? selection.getRangeAt(0) : document.createRange();
+
+    	box.style.display = "block";
+    	document.getElementById('myInput').focus();
+
+    	
+    }
+}
+function hhhhh(){
+	selection.removeAllRanges();
+	console.log(selectRange.startOffset);
+	selection.addRange(selectRange);
+	document.execCommand('unlink', false, true);
+	document.execCommand('createlink', false, document.getElementById('myInput').value);
+	box.style.display = "none";
+}
+</script>
+</head>
+<body>
+<div style="display:none;" id="box">
+	<input id="myInput" type="text" value="124" />
+	<button onclick="hhhhh()">关闭</button>
+</div>
+<p id="mytextbox" contenteditable="true">MozillaMozillaMozillaMozilla</p>
+
+<p><button onclick="SelectText()">Select text</button></p>
+</body>
+</html>

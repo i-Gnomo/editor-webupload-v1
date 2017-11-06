@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>编辑器</title>
+<link type="text/css" rel="stylesheet" href="css/ubb.css">
+<link type="text/css" rel="stylesheet" href="webuploader/webuploader.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ubb.editor.js" charset="utf-8"></script>
+<script type="text/javascript" src="webuploader/webuploader.js"></script>
+<script type="text/javascript" src="js/ubb.editor.webuploader.js"></script>
+</head>
+<body>
+<div>ID: <span class="efocus"></span></div>
+
+<script type="text/plain" id="editor0" style="height:360px;"></script>
+<br>
+<br>
+<script type="text/plain" id="editor1" style="width:500px;height:320px;"></script><br><br>
+<script type="text/plain" id="editor2" style="width:100%;height:350px;"></script>
+<script type="text/javascript">
+
+var a = CUE.Editor('#editor0',{
+	toolbar:['fullscreen source undo redo bold italic underline'],
+	width:700,
+	scaleEnabled:true,
+});
+var b = CUE.Editor('#editor1',{
+	toolbar:['fullscreen source undo redo bold italic underline'],
+});
+
+var c = CUE.Editor('#editor2',{
+	toolbar:['fullscreen source undo redo bold italic underline'],
+});
+</script>
+</body>
+</html>
